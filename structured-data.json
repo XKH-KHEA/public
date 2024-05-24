@@ -1,0 +1,18 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "khea on Organization",
+    "url": "https://github.com/xkh-khea/shopping",
+    "logo": "https://yourwebsite.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+885-15-739-723",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.facebook.com/yourcompany",
+      "https://twitter.com/yourcompany",
+      "https://www.linkedin.com/company/yourcompany"
+    ]
+  }
+  
