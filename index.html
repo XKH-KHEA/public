@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +8,119 @@
   <link rel="stylesheet" href="./styles/view-style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="./page/addproduct.html"
+            ><i class="fas fa-plus-circle"></i> Add Product</a
+          >
+        </div>
+        <div class="nav-right">
+          <a href="./page/cart.html"
+            ><i class="fas fa-shopping-cart"></i> Cart</a
+          >
+          <a href="#" id="account-link"><i class="fas fa-user"></i> Account</a>
+        </div>
+      </nav>
+    </header>
+    <div class="banner">
+      <div class="banner-content">
+        <div class="banner-images">
+          <img src="./images/image1.jpg" alt="Image 1" />
+          <img src="./images/image2.jpg" alt="Image 2" />
+          <img src="./images/image3.jpg" alt="Image 3" />
+          <img src="./images/image4.jpg" alt="Image 4" />
+          <img src="./images/image5.jpg" alt="Image 5" />
+          <img src="./images/image6.jpg" alt="Image 6" />
+          <img src="./images/images.jpg" alt="Image 7" />
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-filters">
+        <div class="nav-filters__dropdown">
+          <button class="nav-btn" onclick="toggleDropdown()">
+            Categories <i class="fas fa-caret-down"></i>
+          </button>
+          <div id="dropdown-content" class="dropdown-content">
+            <input
+              type="text"
+              id="category-search"
+              placeholder="Search categories..."
+              onkeyup="filterCategories()"
+            />
+             Categories will be appended here by JavaScript 
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div id="products" class="product-container">
+        Products will be appended here by JavaScript 
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: onkhea112233@gmail.com</p>
+          <p>Phone: (015) 739 723</p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook-f"></i> Facebook</a
+          >
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i> Twitter</a
+          >
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="./page/addproduct.html"
+            ><i class="fas fa-plus-circle"></i> Add Product</a
+          >
+          <a href="./page/user.html"><i class="fas fa-user"></i> User</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 khmer Company. All rights reserved.</p>
+      </div>
+    </footer>
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" id="close-sidebar"></a>
+      <a href="./page/auth.html"><i class="fas fa-user"></i> Profile</a>
+      <a href="./page/order.html"><i class="fas fa-box"></i> Orders</a>
+      <a href="./page/contact.html"
+        ><i class="fas fa-envelope"></i> Contact Us</a
+      >
+      <a href="./page/settings.html"><i class="fas fa-cog"></i> Settings</a>
+      <a href="./page/user.html"
+        ><i class="fas fa-sign-out-alt"></i> Logout</a
+      >
+    </div>
+    <script src="./scripts/view-products.js"></script>
+    <script src="./scripts/category.js"></script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="khea on shopping." />
+    <title>khea on shopping</title>
+    <link rel="stylesheet" href="./styles/view-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
   <body>
     <header>
       <nav>
@@ -101,9 +214,7 @@
         ><i class="fas fa-envelope"></i> Contact Us</a
       >
       <a href="./page/settings.html"><i class="fas fa-cog"></i> Settings</a>
-      <a href="./page/user.html"
-        ><i class="fas fa-sign-out-alt"></i> Logout</a
-      >
+      <a href="./page/user.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
     <script src="./scripts/view-products.js"></script>
     <script src="./scripts/category.js"></script>
@@ -114,24 +225,22 @@
         const urlParams = new URLSearchParams(queryString);
         return urlParams.get(param);
       }
-      
+
       // Function to perform search based on query parameter
       function performSearch() {
-        const searchTerm = getQueryParam('search');
+        const searchTerm = getQueryParam("search");
         if (searchTerm) {
-          console.log('Performing search for:', searchTerm);
+          console.log("Performing search for:", searchTerm);
           // Implement your search functionality here
           // For example, display search results on the page
           // or send an AJAX request to fetch search results from the server
         } else {
-          console.log('No search term found in the URL.');
+          console.log("No search term found in the URL.");
         }
       }
-  
+
       // Call the performSearch function when the page loads
       window.onload = performSearch;
     </script>
   </body>
 </html>
-
-
