@@ -107,6 +107,30 @@
     </div>
     <script src="./scripts/view-products.js"></script>
     <script src="./scripts/category.js"></script>
+    <script>
+      // Function to extract query parameter from URL
+      function getQueryParam(param) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get(param);
+      }
+      
+      // Function to perform search based on query parameter
+      function performSearch() {
+        const searchTerm = getQueryParam('search');
+        if (searchTerm) {
+          console.log('Performing search for:', searchTerm);
+          // Implement your search functionality here
+          // For example, display search results on the page
+          // or send an AJAX request to fetch search results from the server
+        } else {
+          console.log('No search term found in the URL.');
+        }
+      }
+  
+      // Call the performSearch function when the page loads
+      window.onload = performSearch;
+    </script>
   </body>
 </html>
 
