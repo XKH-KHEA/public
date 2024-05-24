@@ -2,7 +2,7 @@
     "@context": "http://schema.org",
     "@type": "Organization",
     "name": "khea on Organization",
-    "url": "https://github.com/xkh-khea/shopping",
+    "url": "https://github.com/xkh-khea/public",
     "logo": "https://yourwebsite.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
