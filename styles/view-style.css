@@ -412,3 +412,24 @@ footer {
 #account-link {
   cursor: pointer;
 }
+
+/* Add these styles at the end of your CSS file */
+.blog-post {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.blog-post h2 {
+  margin-top: 0;
+}
+
+.post-date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.post-content {
+  margin-top: 0.5rem;
+}
