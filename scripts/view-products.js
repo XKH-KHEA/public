@@ -67,4 +67,16 @@ document.querySelectorAll('.dropdown-content a').forEach(item => {
     // Implement logic to filter products by category
     // You can show/hide products based on the selected category
   }
+  function toggleSidebars() {
+    var sidebar = document.getElementById("nav-left");
+    if (sidebar.style.width === "250px") {
+      sidebar.style.width = "0";
+    } else {
+      sidebar.style.width = "250px";
+    }
+  }
+  
+  function closeSidebar() {
+    document.getElementById("nav-left").style.width = "0";
+  }
   

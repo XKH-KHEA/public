@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabbed Interface</title>
+
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#Profile {background-color: green;}
+#Blog {background-color: blue;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red', 'home.html')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Profile', this, 'green', 'profile.html')">Profile</button>
+<button class="tablink" onclick="openPage('Blog', this, 'blue', 'blog.html')">Blog</button>
+<a href="home.html"></a>
+<div id="Home" class="tabcontent">
+  <!-- Home content will be loaded here -->
+</div>
+
+<div id="Profile" class="tabcontent">
+  <!-- Profile content will be loaded here -->
+</div>
+
+<div id="Blog" class="tabcontent">
+  <!-- Blog content will be loaded here -->
+</div>
+
+<script>
+function openPage(pageName, elmnt, color, pageURL) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+  if (pageURL) {
+    fetch(pageURL)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById(pageName).innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Failed to load ' + pageURL + ': ' + error.message);
+        document.getElementById(pageName).innerHTML = '<p>Failed to load content. Please try again later.</p>';
+      });
+  }
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
