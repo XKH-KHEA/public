@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   async function fetchProducts(query) {
-    const response = await fetch(`http://localhost:3000/products?q=${query}`);
+    const response = await fetch(`https://khmer-shoping.onrender.com/products?q=${query}`);
     const products = await response.json();
     return products;
   }
@@ -33,14 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     products.forEach((product) => {
-      // const productCard = document.createElement("div");
-      // productCard.classList.add("product-card");
-      // productCard.innerHTML = `
-      //   <h3>${product.name}</h3>
-      //   <p>${product.description}</p>
-      //   <p>Price: $${product.price}</p>
-      // `;
-      // productContainer.appendChild(productCard);
       const productCard = document.createElement("div");
       productCard.className = "product-card";
       const rating = 4;
@@ -62,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function loadNoProductScript() {
-    fetch("https://khmer-shoping.onrender.com/products")
+    fetch("https://khmer-shoping.onrender.com/products/view")
       .then((response) => response.json())
       .then((data) => {
         data.forEach((product) => {

@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productList = document.getElementById("product-list");
   
     // Fetch and display products
-    fetch("https://khmer-shoping.onrender.com/products")
+    fetch("https://khmer-shoping.onrender.com/products/view")
       .then((response) => response.json())
       .then((data) => {
         data.forEach((product) => {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stock: parseInt(formData.get("stock")),
       };
   
-      fetch("https://khmer-shoping.onrender.com/products", {
+      fetch("https://khmer-shoping.onrender.com/products/view", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

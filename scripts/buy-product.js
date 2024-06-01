@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const stars = getStarRating(rating);
 
   if (productId) {
-    fetch(`https://khmer-shoping.onrender.com/products/${productId}`)
+    fetch(`https://khmer-shoping.onrender.com/products/view/${productId}`)
       .then((response) => response.json())
       .then((product) => {
         const productCard = document.createElement("div");
