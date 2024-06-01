@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In Example</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <meta name="google-signin-client_id" content="133649354458-5bt40c8nh8vhn7u8kr3nc8rbcfdu97lt.apps.googleusercontent.com">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login with Google</h2>
+        <div id="g_id_onload"
+             data-client_id="133649354458-5bt40c8nh8vhn7u8kr3nc8rbcfdu97lt.apps.googleusercontent.com"
+             data-callback="handleCredentialResponse">
+        </div>
+        <div class="g_id_signin"
+             data-type="standard"></div>
+        <div id="profile"></div>
+    </div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="../scripts/login.js"></script>
+</body>
+</html>
