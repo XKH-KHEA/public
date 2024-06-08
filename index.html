@@ -23,6 +23,7 @@
         </div>
         <div class="nav-center">
           <form id="search-form" action="/search" method="GET">
+            <span style="font-size:30px;cursor:pointer" onclick=" toggleNav()">&#9776;</span>
             <input
               type="text"
               id="search-input"
@@ -34,7 +35,9 @@
               <i class="fas fa-search"></i>
             </button>
           </form>
+          
         </div>
+        
         <div class="nav-right">
           <a href="./page/cart.html"
             ><i class="fas fa-shopping-cart"></i> Cart</a
@@ -127,5 +130,18 @@
     <script src="./scripts/blog.js"></script>
     <script src="./scripts/search-products.js"></script> <!-- Add this line -->
     <script src="./scripts/search-products.js"></script>
+      
+    <script>
+      function toggleNav() {
+        var navLeft = document.getElementsByClassName("nav-left")[0]; // Selecting the first element with class "nav-left"
+        var search = document.getElementsByClassName("nav-center")[0];
+        if (navLeft.style.display === "block") {
+          navLeft.style.display = "none";
+        } else {
+          navLeft.style.display = "block";
+          search.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

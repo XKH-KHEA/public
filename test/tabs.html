@@ -47,10 +47,10 @@ body, html {
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('Home', this, 'red', 'home.html')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Home', this, 'red', '.test/home.html')" id="defaultOpen">Home</button>
 <button class="tablink" onclick="openPage('Profile', this, 'green', 'profile.html')">Profile</button>
 <button class="tablink" onclick="openPage('Blog', this, 'blue', 'blog.html')">Blog</button>
-<a href="home.html"></a>
+<a href="home.html" class="tablink" onclick="openPage('Home', this, 'red', '.test/home.html')" >Home</a>
 <div id="Home" class="tabcontent">
   <!-- Home content will be loaded here -->
 </div>

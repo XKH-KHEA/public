@@ -10,6 +10,8 @@ body {
   background-color: #f4f4f4;
   text-align: left;
   padding: 20px;
+  border-radius: 20%;
+  margin: 0;
 }
 
 h1 {
@@ -205,6 +207,15 @@ footer {
     margin: 10px 0; /* Add spacing between footer sections */
     min-width: 100%; /* Ensure sections take full width */
   }
+  .product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 20px);
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -213,8 +224,13 @@ footer {
   }
 
   .product-card {
-    max-width: 100%; /* Allow product cards to take full width */
-    padding: 10px; /* Adjust padding */
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 20px);
+    max-width: 130px;
+    margin-bottom: 20px;
   }
 
   .product-details h2 {
@@ -432,6 +448,7 @@ footer {
 .post-content {
   margin-top: 0.5rem;
 }
+
 .nav-btns {
   display: none;
 }
@@ -444,27 +461,47 @@ footer {
   .nav-btns {
     display: block;
   }
-  .nav-left {
-    width: 0;
-  }
 
   .nav-left {
     display: none;
   }
-  .nav-left {
-    background-color: #b7b9ba;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-width: 1px;
+  .nav-right {
+    display: none;
   }
-
   .nav-btns:hover,
   .nav-btns:focus {
     background-color: #2980b9;
   }
+  #search-form span {
+    display:block;
+   }
+#search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 200%;
+}
+
+#search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #c5c9ce;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background-color: #65686ae4;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -496,18 +533,12 @@ footer {
   .nav-btns:focus {
     background-color: #2980b9;
   }
+  #search-form span {
+    display: block;
+   }
+
 }
 
-/* Add this to your view-style.css file */
-
-/* Styling the search form */
-/* .nav-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-} */
-/* Search Form */
 #search-form {
   display: flex;
   justify-content: center;
@@ -531,7 +562,83 @@ footer {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
+#search-form span {
+ display: none;
+}
 
 #search-form button:hover {
   background-color: #65686ae4;
 }
+
+@media (min-width: 790px) {
+  .nav-center{
+    display: block;
+  }
+  }
+@media (max-width: 580px) {
+ .right{
+    float: right;
+  }
+    
+#search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 300px;
+}
+
+#search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #c5c9ce;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background-color: #65686ae4;
+}
+#search-form span {
+  display: block;
+ }
+}
+
+@media (max-width: 780px) {
+  #search-form span {
+    display:block;
+   }
+  }
+
+    @media (max-width: 400px) {
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: left;
+        padding: 0px;
+      }
+      .product-container {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+      }
+      .product-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+      }
+
+ }
