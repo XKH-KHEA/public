@@ -1,3 +1,4 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="khea on shopping." />
     <title>khea on shopping</title>
-    <link rel="stylesheet" href="./styles/view-style.css">
+    <link rel="stylesheet" href="./styles/view-style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -23,7 +24,11 @@
         </div>
         <div class="nav-center">
           <form id="search-form" action="/search" method="GET">
-            <span style="font-size:30px;cursor:pointer" onclick=" toggleNav()">&#9776;</span>
+            <span
+              style="font-size: 30px; cursor: pointer"
+              onclick=" toggleNav()"
+              >&#9776;</span
+            >
             <input
               type="text"
               id="search-input"
@@ -35,17 +40,21 @@
               <i class="fas fa-search"></i>
             </button>
           </form>
-          
         </div>
-        
+
         <div class="nav-right">
           <a href="./page/cart.html"
             ><i class="fas fa-shopping-cart"></i> Cart</a
           >
+          <a href="./test/admin.html"
+            ><i class="fas fa-dashboard"></i> Dashboard</a
+          >
+          <a id="mode-toggle"><i class="fas fa-moon"></i>Mode</a>
           <a href="#" id="account-link"><i class="fas fa-user"></i> Account</a>
         </div>
       </nav>
     </header>
+    <button id="mode-toggle">Toggle Mode</button>
     <div class="banner">
       <div class="banner-content">
         <div class="banner-images">
@@ -72,14 +81,14 @@
               placeholder="Search categories..."
               onkeyup="filterCategories()"
             />
-            <!-- Categories will be appended here by JavaScript  -->
+             Categories will be appended here by JavaScript  
           </div>
         </div>
       </div>
     </nav>
     <div class="content">
       <div id="products" class="product-container">
-        <!-- Products will be appended here by JavaScript  -->
+         Products will be appended here by JavaScript  
       </div>
     </div>
     <footer>
@@ -128,9 +137,7 @@
     <script src="./scripts/view-products.js"></script>
     <script src="./scripts/category.js"></script>
     <script src="./scripts/blog.js"></script>
-    <script src="./scripts/search-products.js"></script> <!-- Add this line -->
     <script src="./scripts/search-products.js"></script>
-      
     <script>
       function toggleNav() {
         var navLeft = document.getElementsByClassName("nav-left")[0]; // Selecting the first element with class "nav-left"
@@ -142,6 +149,303 @@
           search.style.display = "none";
         }
       }
+
+      const toggleButton = document.getElementById("mode-toggle");
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+      });
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="khea on shopping." />
+    <title>khea on shopping</title>
+    <link rel="stylesheet" href="./styles/view-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Card View */
+      .product-container.card-view .product {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+
+      .product-container.card-view .product img {
+        max-width: 100%;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+      }
+
+      .product-container.card-view .product-details {
+        padding: 10px;
+      }
+
+      /* List View */
+      .product-container.list-view .product {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+
+      .product-container.list-view .product img {
+        max-width: 150px;
+        margin-right: 10px;
+      }
+
+      .product-container.list-view .product-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Add these styles to your CSS file or inside the <style> tag */
+
+      .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      .scroll-container .product {
+        display: inline-block;
+        white-space: normal;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="./page/addproduct.html"
+            ><i class="fas fa-plus-circle"></i> Add Product</a
+          >
+          <a href="./page/blog.html"><i class="fas fa-blog"></i> Blog</a>
+        </div>
+        <div class="nav-center">
+          <form id="search-form" action="/search" method="GET">
+            <span style="font-size: 30px; cursor: pointer" onclick="toggleNav()"
+              >&#9776;</span
+            >
+            <input
+              type="text"
+              id="search-input"
+              name="q"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <div class="nav-right">
+          <a href="./page/cart.html"
+            ><i class="fas fa-shopping-cart"></i> Cart</a
+          >
+          <a href="./test/admin.html"
+            ><i class="fas fa-dashboard"></i> Dashboard</a
+          >
+          <a id="mode-toggle"><i class="fas fa-moon"></i>Mode</a>
+          <a href="#" id="account-link"><i class="fas fa-user"></i> Account</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="banner">
+      <div class="banner-content">
+        <div class="banner-images">
+          <img src="./images/image1.jpg" alt="Image 1" />
+          <img src="./images/image2.jpg" alt="Image 2" />
+          <img src="./images/image3.jpg" alt="Image 3" />
+          <img src="./images/image4.jpg" alt="Image 4" />
+          <img src="./images/image5.jpg" alt="Image 5" />
+          <img src="./images/image6.jpg" alt="Image 6" />
+          <img src="./images/images.jpg" alt="Image 7" />
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-filters">
+        <div class="nav-filters__dropdown">
+          <button class="nav-btn" onclick="toggleDropdown()">
+            Categories <i class="fas fa-caret-down"></i>
+          </button>
+          <div id="dropdown-content" class="dropdown-content">
+            <input
+              type="text"
+              id="category-search"
+              placeholder="Search categories..."
+              onkeyup="filterCategories()"
+            />
+            <!-- Categories will be appended here by JavaScript  -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="contents">
+      <div id="productss" class="scroll-container card-view">
+        <!-- Products will be appended here by JavaScript -->
+      </div>
+    </div>
+    <div class="content">
+      <!-- <div class="view-toggle"> -->
+      <button id="toggle-view" class="view-toggle">
+        <i class="fas fa-th-large"></i> Toggle View
+      </button>
+      <!-- </div> -->
+      <div id="products" class="product-container card-view">
+        <!-- Products will be appended here by JavaScript -->
+        <!-- Add more products here -->
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: onkhea112233@gmail.com</p>
+          <p>Phone: (015) 739 723</p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook-f"></i> Facebook</a
+          >
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i> Twitter</a
+          >
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="./page/addproduct.html"
+            ><i class="fas fa-plus-circle"></i> Add Product</a
+          >
+          <a href="./page/user.html"><i class="fas fa-user"></i> User</a>
+          <a href="./page/blog.html"><i class="fas fa-blog"></i> Blog</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 khmer Company. All rights reserved.</p>
+      </div>
+    </footer>
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" id="close-sidebar"></a>
+      <a href="./page/auth.html"><i class="fas fa-user"></i> Profile</a>
+      <a href="./page/order.html"><i class="fas fa-box"></i> Orders</a>
+      <a href="./page/contact.html"
+        ><i class="fas fa-envelope"></i> Contact Us</a
+      >
+      <a href="./page/settings.html"><i class="fas fa-cog"></i> Settings</a>
+      <a href="./page/user.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+    <script src="./scripts/view-products.js"></script>
+    <script src="./scripts/category.js"></script>
+    <script src="./scripts/blog.js"></script>
+    <script src="./scripts/search-products.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function toggleNav() {
+          var navLeft = document.getElementsByClassName("nav-left")[0];
+          var search = document.getElementsByClassName("nav-center")[0];
+          if (navLeft.style.display === "block") {
+            navLeft.style.display = "none";
+          } else {
+            navLeft.style.display = "block";
+            search.style.display = "none";
+          }
+        }
+
+        const toggleButton = document.getElementById("mode-toggle");
+        toggleButton.addEventListener("click", () => {
+          document.body.classList.toggle("dark-mode");
+        });
+
+        const viewToggleButton = document.getElementById("toggle-view");
+        const productContainer = document.getElementById("products");
+
+        viewToggleButton.addEventListener("click", () => {
+          if (productContainer.classList.contains("card-view")) {
+            productContainer.classList.remove("card-view");
+            productContainer.classList.add("list-view");
+            viewToggleButton.innerHTML =
+              '<i class="fas fa-th-large"></i> Card View';
+          } else {
+            productContainer.classList.remove("list-view");
+            productContainer.classList.add("card-view");
+            viewToggleButton.innerHTML =
+              '<i class="fas fa-list"></i> List View';
+          }
+        });
+      });
+      fetch("https://khmer-shoping.onrender.com/products/view")
+          .then(response => response.json())
+          .then(data => {
+            const scrollContainer = document.getElementById('productss');
+            data.products.forEach(product => {
+              const productDiv = document.createElement('div');
+              productDiv.class('product');
+              productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <div class="product-details">
+                  <h3>${product.name}</h3>
+                  <p>${product.description}</p>
+                  <p>Price: $${product.price}</p>
+                </div>
+              `;
+              scrollContainer.appendChild(productDiv);
+            });
+          })
+          .catch(error => console.error('Error fetching products:', error));
+      // const productContainer = document.getElementById("productss");
+
+      // // Fetch and display products
+      // fetch("https://khmer-shoping.onrender.com/products/view")
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     data.forEach((product) => {
+      //       const productCard = document.createElement("div");
+      //       productCard.className = "product-card";
+      //       const rating = 4;
+      //       const stars = getStarRating(rating);
+      //       productCard.innerHTML = `
+      //           <img src="${product.imageUrl}" alt="${product.name}">
+      //           <div class="product-details">
+      //               <h2>${product.name}</h2>
+      //               <p>${product.description}</p>
+      //               <p><strong>Price:</strong> $${product.price}</p>
+      //               <div class="star-rating">${stars}</div>
+      //           </div>
+      //       `;
+      //       productCard.addEventListener("click", () => {
+      //         window.location.href = `./page/buy-product.html?id=${product._id}`;
+      //       });
+      //       productContainer.appendChild(productCard);
+      //     });
+      //   })
+        // .catch((error) => console.error("Error:", error));
     </script>
   </body>
 </html>
