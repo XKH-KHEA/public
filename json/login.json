@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "message": "Login successful!",
+  "data": {
+    "username": "testuser",
+    "password": "ok391291"
+  }
+}

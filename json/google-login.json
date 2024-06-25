@@ -1,0 +1,9 @@
+{
+    "status": "success",
+    "message": "Google login successful!",
+    "data": {
+      "name": "Google User",
+      "email": "googleuser@example.com"
+    }
+  }
+  

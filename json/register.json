@@ -1,0 +1,9 @@
+{
+    "status": "success",
+    "message": "Registration successful!",
+    "data": {
+      "username": "testuser",
+      "email": "test@example.com"
+    }
+  }
+  
