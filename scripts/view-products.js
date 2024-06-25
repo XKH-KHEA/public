@@ -48,9 +48,16 @@ document.getElementById("account-link").onclick = function() {
         sidebar.style.width = "250px";
     }
 }
-
+document.getElementById("product-sidbar").onclick = function() {
+    var sidebar = document.getElementById("sidebars");
+    if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "250px";
+    }
+}
 document.getElementById("close-sidebar").onclick = function() {
-    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("sidebars").style.width = "0";
 }
 
 // JavaScript code to handle category filtering

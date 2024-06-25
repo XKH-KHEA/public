@@ -234,18 +234,16 @@
   <body>
     <header>
       <nav>
-        <div class="nav-left">
-          <a href="./index.html"><i class="fas fa-home"></i> Home</a>
-          <a href="./page/addproduct.html"
-            ><i class="fas fa-plus-circle"></i> Add Product</a
+        <div>
+          <span style="font-size: 30px; cursor: pointer" id="product-sidbar"
+            >&#9776;</span
           >
-          <a href="./page/blog.html"><i class="fas fa-blog"></i> Blog</a>
+        </div>
+        <div class="logosec">
+          <div class="logo">ERP</div>
         </div>
         <div class="nav-center">
           <form id="search-form" action="/search" method="GET">
-            <span style="font-size: 30px; cursor: pointer" onclick="toggleNav()"
-              >&#9776;</span
-            >
             <input
               type="text"
               id="search-input"
@@ -259,12 +257,6 @@
           </form>
         </div>
         <div class="nav-right">
-          <a href="./page/cart.html"
-            ><i class="fas fa-shopping-cart"></i> Cart</a
-          >
-          <a href="./test/admin.html"
-            ><i class="fas fa-dashboard"></i> Dashboard</a
-          >
           <a id="mode-toggle"><i class="fas fa-moon"></i>Mode</a>
           <a href="#" id="account-link"><i class="fas fa-user"></i> Account</a>
         </div>
@@ -361,6 +353,15 @@
       <a href="./page/settings.html"><i class="fas fa-cog"></i> Settings</a>
       <a href="./page/user.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
+    <div id="sidebars" class="sidebars">
+      <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./page/addproduct.html"
+        ><i class="fas fa-plus-circle"></i> Add Product</a
+      >
+      <a href="./page/blog.html"><i class="fas fa-blog"></i> Blog</a>
+      <a href="./page/cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+      <a href="./test/admin.html"><i class="fas fa-dashboard"></i> Dashboard</a>
+    </div>
     <script src="./scripts/view-products.js"></script>
     <script src="./scripts/category.js"></script>
     <script src="./scripts/blog.js"></script>
@@ -401,13 +402,13 @@
         });
       });
       fetch("https://khmer-shoping.onrender.com/products/view")
-          .then(response => response.json())
-          .then(data => {
-            const scrollContainer = document.getElementById('productss');
-            data.products.forEach(product => {
-              const productDiv = document.createElement('div');
-              productDiv.class('product');
-              productDiv.innerHTML = `
+        .then((response) => response.json())
+        .then((data) => {
+          const scrollContainer = document.getElementById("productss");
+          data.products.forEach((product) => {
+            const productDiv = document.createElement("div");
+            productDiv.class("product");
+            productDiv.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
                 <div class="product-details">
                   <h3>${product.name}</h3>
@@ -415,10 +416,10 @@
                   <p>Price: $${product.price}</p>
                 </div>
               `;
-              scrollContainer.appendChild(productDiv);
-            });
-          })
-          .catch(error => console.error('Error fetching products:', error));
+            scrollContainer.appendChild(productDiv);
+          });
+        })
+        .catch((error) => console.error("Error fetching products:", error));
       // const productContainer = document.getElementById("productss");
 
       // // Fetch and display products
@@ -445,7 +446,7 @@
       //       productContainer.appendChild(productCard);
       //     });
       //   })
-        // .catch((error) => console.error("Error:", error));
+      // .catch((error) => console.error("Error:", error));
     </script>
   </body>
 </html>
