@@ -16,21 +16,40 @@
   <body>
     <header>
       <nav>
-        <div class="nav-left">
-          <a href="../index.html"><i class="fas fa-home"></i> Home</a>
-          <a href="../page/addproduct.html"
-            ><i class="fas fa-plus-circle"></i> Add Product</a
+        <div>
+          <div class="logosec">
+          <span style="font-size: 30px; cursor: pointer" id="product-sidbar"
+            >&#9776;</span
           >
-          <a href="./blog.html"><i class="fas fa-blog"></i> Blog</a>
+          
+            <div class="logo">ERP</div>
+          </div>
+        </div>
+        <!-- <div class="logosec">
+          <div class="logo">ERP</div>
+        </div> -->
+        <!-- <div class="nav-center"> -->
+        <div>
+          <form id="search-form" action="/search" method="GET">
+            <input
+              type="text"
+              id="search-input"
+              name="q"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
         </div>
         <div class="nav-right">
-          <a href="../page/cart.html"
-            ><i class="fas fa-shopping-cart"></i> Cart</a
-          >
-          <a href="#" id="account-link"><i class="fas fa-user"></i> Account</a>
+          <a id="mode-toggle"><i class="fas fa-moon"></i></a>
+          <a href="#" id="account-link"><i class="fas fa-user"></i></a>
         </div>
       </nav>
     </header>
+
     <div class="content">
       <div id="add-product-container">
         <h1>E-commerce Platform</h1>
@@ -52,7 +71,7 @@
             <input type="url" id="imageUrl" name="imageUrl" />
             <label for="stock">Stock:</label>
             <input type="number" id="stock" name="stock" required />
-            <button type="submit">Add Product</button>
+            <button type="submit" class="ok">Add Product</button>
           </form>
         </div>
         <div id="products">

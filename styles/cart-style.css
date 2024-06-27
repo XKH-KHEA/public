@@ -27,7 +27,7 @@ body {
     margin-bottom: 5px;
   }
   
-  input[type="text"], input[type="number"], select {
+  #cart-form input[type="text"], input[type="number"], select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -35,7 +35,7 @@ body {
     border-radius: 5px;
   }
   
-  button {
+  #cart-form button {
     background-color: #3498DB;
     color: white;
     padding: 10px 15px;
@@ -44,7 +44,7 @@ body {
     cursor: pointer;
   }
   
-  button:hover {
+  #cart-form button:hover {
     background-color: #2980B9;
   }
   
