@@ -41,10 +41,10 @@ function getStarRating(rating) {
 }
 document.getElementById("account-link").onclick = function () {
   var sidebar = document.getElementById("sidebar");
-  if (sidebar.style.width === "250px") {
+  if (sidebar.style.width === "300px") {
     sidebar.style.width = "0";
   } else {
-    sidebar.style.width = "250px";
+    sidebar.style.width = "300px";
   }
 };
 document.getElementById("product-sidbar").onclick = function () {

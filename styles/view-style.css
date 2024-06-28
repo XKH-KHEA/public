@@ -130,7 +130,7 @@ header nav a {
 #mode-toggle {
   color: #ffffff;
   font-size: 15px;
-  border-radius: 45%;
+  border-radius: 50px;
   align-items: start;
   justify-content: left;
 }
@@ -138,8 +138,10 @@ header nav a i {
   color: #ffffff;
 }
 header nav a:hover {
-  background-color: #5500cb;
+  /* background-color: #5500cb; */
+  font-size: 30px;
   border-radius: 50%;
+  background-color: #3e3d3de0;
 }
 /* header nav span {
   size: 10px;
@@ -219,7 +221,7 @@ footer {
   color: #ffd700;
   margin: 0 2px;
 }
-/* Dark Mode */
+/*============================================ Dark Mode ======================================*/
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -278,6 +280,10 @@ body.dark-mode {
 .dark-mode .dropdown-content {
   background-color: #333333;
   color: #ffffff;
+}
+.dark-mode .sidebar,
+.dark-mode .sidebars {
+  background-color: #000;
 }
 
 /* Card View */
@@ -441,7 +447,7 @@ body.dark-mode {
   position: fixed;
   z-index: 999; /* Less than header's z-index */
   top: 75px; /* Adjusted to match the height of the fixed header */
-  right: 3%;
+  right: 2%;
   background-color: #ffffff;
   overflow-x: hidden;
   transition: -1s;
@@ -481,10 +487,40 @@ body.dark-mode {
   font-size: 18px;
   color: #0e0d0d;
   display: block;
-  transition: 0.3s;
+  transition: 0.4s;
 }
-
-.sidebar a:hover {
+.Profile {
+  text-decoration: none; /* Remove default underline */
+  color: #000; /* Text color */
+  border-bottom: 1px solid #007bff; /* Add bottom border */
+  padding-bottom: 2px;
+  text-align: center;
+  /* background-color: #000; */
+  justify-content: center;
+  display: flex;
+  background-color: #ffffff;
+  height: 90px;
+}
+.Profile button {
+  background-color: #000;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+}
+.Profile i {
+  font-size: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-size: 60px;
+  size: 60px;
+}
+.Profile:hover {
+  background-color: #ffffff;
+}
+.hover:hover {
+  background-color: #575757;
+}
+.hovers:hover {
   background-color: #575757;
 }
 .sidebars a:hover {
@@ -542,10 +578,15 @@ body.dark-mode {
 #search-input {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
   border-radius: 20px 20px 20px 20px;
+  background-color: #eceef0;
   width: 350px;
   max-width: 500px;
+  border: none;
+}
+#search-input:hover {
+  border: 1px solid #7d7c7ce0;
+  background-color: #fff;
 }
 
 #search-form button {
