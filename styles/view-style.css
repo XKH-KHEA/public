@@ -123,7 +123,7 @@ header nav a {
   text-decoration: none;
   margin: 0 10px;
   padding: 5px 10px;
-  font-size: 30px;
+  font-size: 26px;
   background-color: #000000;
   border-radius: 50%;
 }
@@ -320,8 +320,6 @@ body.dark-mode {
   margin: 30px;
 }
 
-
-
 /* Banner styles */
 .banner {
   overflow: hidden;
@@ -436,13 +434,14 @@ body.dark-mode {
   position: fixed;
   z-index: 999; /* Less than header's z-index */
   top: 75px; /* Adjusted to match the height of the fixed header */
-  right: 0;
+  right: 3%;
   background-color: #ffffff;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: -1s;
   padding-top: 20px; /* Adjusted padding to fit under header */
-  border-radius: 5%;
+  border-radius: 7%;
   border-width: 1px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
 }
 .sidebars {
   height: 100%;
@@ -453,9 +452,10 @@ body.dark-mode {
   left: 0;
   background-color: #ffffff;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: -1s;
   padding-top: 20px; /* Adjusted padding to fit under header */
   border-width: 1px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
 }
 .sidebars a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -536,8 +536,8 @@ body.dark-mode {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 10px 0 0 10px;
-  width: 400px;
+  border-radius: 20px 0 0 20px;
+  width: 350px;
   max-width: 500px;
 }
 
@@ -547,7 +547,7 @@ body.dark-mode {
   background-color: #0c007d;
   color: white;
   border: none;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 20px 20px 0;
   cursor: pointer;
 }
 #search-form span {
@@ -618,8 +618,14 @@ body.dark-mode {
 }
 /* ================================================@media (max-width: 580px)================================= */
 @media (max-width: 580px) {
-  .right {
-    float: right;
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #ffffff;
+    text-align: left;
+    padding: 20px;
+    border-radius: 20%;
+    margin: 0;
+    font-size: 12px;
   }
   header nav a {
     color: #000000;
@@ -634,7 +640,7 @@ body.dark-mode {
   header nav a i {
     display: flex;
     color: #ffffff;
-    text-align: left;
+    align-items: start;
   }
   header nav span {
     size: 10px;
@@ -642,7 +648,7 @@ body.dark-mode {
   }
 
   header nav .logosec .logo {
-    font-size: 25px;
+    font-size: 35px;
     color: #007bff;
     text-align: center;
     width: 100px;
@@ -669,7 +675,7 @@ body.dark-mode {
     border-radius: 5px 0 0 5px;
     width: 180px;
   }
-  .nav-right .account-link #search-form button {
+  .account-link {
     padding: 10px 20px;
     font-size: 10px;
     background-color: #0c007d;
@@ -679,18 +685,61 @@ body.dark-mode {
     cursor: pointer;
   }
 
+  #search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    width: 400px;
+    max-width: 150px;
+  }
+
+  #search-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0c007d;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+  }
+
   #search-form button:hover {
     background-color: #65686ae4;
   }
-  /* #search-form span {
-    display: block;
-  } */
+  .product-container {
+    flex: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1 1 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 20px);
+    max-width: 130px;
+    margin-bottom: 20px;
+  }
+
+  .product-details h2 {
+    font-size: 1.2em;
+  }
+  .banner {
+    height: 150px;
+  }
+
+  .banner-images img {
+    width: 25%;
+  }
 }
 /* ==============================================screen(max-width: 480px)=========================== */
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   nav a button {
-    padding: 8px 16px; /* Adjust button padding for smaller screens */
+    padding: 8px 16px; 
   }
 
   .product-card {
@@ -704,14 +753,14 @@ body.dark-mode {
   }
 
   .product-details h2 {
-    font-size: 1.2em; /* Adjust font size */
+    font-size: 1.2em; 
   }
   .banner {
-    height: 150px; /* Further adjust banner height for very small screens */
+    height: 150px; 
   }
 
   .banner-images img {
-    width: 25%; /* Each image still takes up 25% of the banner width */
+    width: 25%; 
   }
 
   @keyframes slideLeft {
@@ -721,7 +770,7 @@ body.dark-mode {
     100% {
       transform: translateX(
         -300%
-      ); /* Adjust animation distance for very small screens */
+      ); 
     }
   }
   .nav-btns {
@@ -761,7 +810,7 @@ body.dark-mode {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
     width: 400px;
     max-width: 150px;
   }
@@ -772,7 +821,7 @@ body.dark-mode {
     background-color: #0c007d;
     color: white;
     border: none;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
     cursor: pointer;
   }
   #search-form span {
@@ -782,8 +831,25 @@ body.dark-mode {
   #search-form button:hover {
     background-color: #65686ae4;
   }
-}
-
-
+} */
 
 /* ===========================NEW TEST================================== */
+
+.image-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.image-button:hover {
+  background-color: rgba(0, 0, 0, 0.849); /* Darker background on hover */
+}
