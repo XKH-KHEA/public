@@ -543,7 +543,7 @@ body.dark-mode {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px 20px 20px 20px;
   width: 350px;
   max-width: 500px;
 }
@@ -554,7 +554,7 @@ body.dark-mode {
   background-color: #0c007d;
   color: white;
   border: none;
-  border-radius: 0 20px 20px 0;
+  border-radius: 20px 20px 20px 20px;
   cursor: pointer;
 }
 #search-form span {
@@ -675,13 +675,7 @@ body.dark-mode {
     margin-bottom: 0px;
     border-radius: 20px;
   }
-  #search-input {
-    padding: 10px;
-    font-size: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    width: 180px;
-  }
+
   .account-link {
     padding: 10px 20px;
     font-size: 10px;
@@ -696,11 +690,25 @@ body.dark-mode {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 20px 0 0 20px;
-    width: 400px;
-    max-width: 150px;
+    border-radius: 20px 20px 20px 20px;
+    width: 200px;
+    max-width: 200px;
   }
-
+  .search-container {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    left: 210px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #aaa;
+    pointer-events: none; /* Prevents the icon from blocking input clicks */
+  }
   #search-form button {
     padding: 10px 20px;
     font-size: 16px;
@@ -744,9 +752,9 @@ body.dark-mode {
 }
 /* ==============================================screen(max-width: 480px)=========================== */
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   nav a button {
-    padding: 8px 16px; 
+    padding: 8px 16px;
   }
 
   .product-card {
@@ -760,14 +768,14 @@ body.dark-mode {
   }
 
   .product-details h2 {
-    font-size: 1.2em; 
+    font-size: 1.2em;
   }
   .banner {
-    height: 150px; 
+    height: 150px;
   }
 
   .banner-images img {
-    width: 25%; 
+    width: 25%;
   }
 
   @keyframes slideLeft {
@@ -775,9 +783,7 @@ body.dark-mode {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(
-        -300%
-      ); 
+      transform: translateX(-300%);
     }
   }
   .nav-btns {
@@ -812,12 +818,27 @@ body.dark-mode {
     margin-bottom: 0px;
     border-radius: 20px;
   }
+  .search-container {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    left: 140px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #aaa;
+    pointer-events: none; /* Prevents the icon from blocking input clicks */
+  }
 
   #search-input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px 20px 20px 20px;
     width: 400px;
     max-width: 150px;
   }
@@ -838,7 +859,7 @@ body.dark-mode {
   #search-form button:hover {
     background-color: #65686ae4;
   }
-} */
+}
 
 /* ===========================NEW TEST================================== */
 
@@ -859,4 +880,20 @@ body.dark-mode {
 
 .image-button:hover {
   background-color: rgba(0, 0, 0, 0.849); /* Darker background on hover */
+}
+/* ============================================Search++++++++++++++++++++++++++++++++++ */
+.search-container {
+  position: relative;
+  width: 300px;
+  margin: 50px auto;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #aaa;
+  pointer-events: none; /* Prevents the icon from blocking input clicks */
 }
