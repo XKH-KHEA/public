@@ -127,6 +127,13 @@ header nav a {
   background-color: #000000;
   border-radius: 50%;
 }
+#mode-toggle {
+  color: #ffffff;
+  font-size: 15px;
+  border-radius: 45%;
+  align-items: start;
+  justify-content: left;
+}
 header nav a i {
   color: #ffffff;
 }
