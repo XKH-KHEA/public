@@ -474,10 +474,15 @@ body.dark-mode {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px 15px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   color: #0e0d0d;
   display: block;
   transition: 0.3s;
+  border-bottom: 1px solid #414243; /* Add bottom border */
+  justify-content: space-between;
+}
+.sidebars a i {
+  color: #0056b3;
 }
 
 .sidebar a {
@@ -492,7 +497,7 @@ body.dark-mode {
 .Profile {
   text-decoration: none; /* Remove default underline */
   color: #000; /* Text color */
-  border-bottom: 1px solid #007bff; /* Add bottom border */
+  border-bottom: 1px solid #414243; /* Add bottom border */
   padding-bottom: 2px;
   text-align: center;
   /* background-color: #000; */
@@ -580,23 +585,16 @@ body.dark-mode {
   font-size: 16px;
   border-radius: 20px 20px 20px 20px;
   background-color: #eceef0;
-  width: 350px;
-  max-width: 500px;
+  width: 30%;
   border: none;
 }
 #search-input:hover {
   border: 1px solid #7d7c7ce0;
   background-color: #fff;
+  width: 100%;
 }
-
-#search-form button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #0c007d;
-  color: white;
-  border: none;
-  border-radius: 20px 20px 20px 20px;
-  cursor: pointer;
+#search-input:focus {
+  width: 100%;
 }
 #search-form span {
   left: 0;
@@ -730,11 +728,17 @@ body.dark-mode {
   #search-input {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
     border-radius: 20px 20px 20px 20px;
-    width: 200px;
-    max-width: 200px;
+    width: 170px;
   }
+  #search-input:hover {
+    width: 200px;
+    border: 1px solid #ccc;
+  }
+  #search-input:focus {
+    width: 200px;
+  }
+
   .search-container {
     position: relative;
     width: 300px;
@@ -880,8 +884,7 @@ body.dark-mode {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 20px 20px 20px 20px;
-    width: 400px;
-    max-width: 150px;
+    width: 150px;
   }
 
   #search-form button {
@@ -925,7 +928,7 @@ body.dark-mode {
 /* ============================================Search++++++++++++++++++++++++++++++++++ */
 .search-container {
   position: relative;
-  width: 300px;
+  width: 500px;
   margin: 50px auto;
 }
 
