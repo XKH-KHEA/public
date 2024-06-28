@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function toggleNav() {
+    var login = document.getElementById("login");
+    var register = document.getElementById("registration");
+    if (login.style.display === "block") {
+      login.style.display = "none";
+      register.style.display = "block";
+    } else if ((register.style.display = "block")) {
+      login.style.display = "block";
+      register.style.display = "none";
+    } else {
+      login.style.display = "none";
+      register.style.display = "block";
+    }
+  }
+  const registerBT = document.getElementById("registerbt");
+  registerBT.addEventListener("click", () => {
+    onclick(toggleNav());
+  });
+  const backs = document.getElementById("backbt");
+  backs.addEventListener("click", () => {
+    onclick(toggleNav());
+  });
   const registerForm = document.getElementById("register-form");
   const loginForm = document.getElementById("login-form");
 

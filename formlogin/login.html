@@ -7,35 +7,14 @@
     <link rel="stylesheet" href="../formlogin/login.css" />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="../formlogin/login.js" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        function toggleNav() {
-          var login = document.getElementById("login");
-          var register = document.getElementById("registration");
-          if (login.style.display === "block") {
-            login.style.display = "none";
-            register.style.display = "block";
-          } else if ((register.style.display = "block")) {
-            login.style.display = "block";
-            register.style.display = "none";
-          } else {
-            login.style.display = "none";
-            register.style.display = "block";
-          }
-        }
-        const registerBT = document.getElementById("registerbt");
-        registerBT.addEventListener("click", () => {
-          onclick(toggleNav());
-        });
-        const backs = document.getElementById("backbt");
-        backs.addEventListener("click", () => {
-          onclick(toggleNav());
-        });
-      });
-    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
-  <body>
-    <!-- <h1>User Authentication</h1> -->
+
+  <!-- <body>
+  
 
     <div id="registration">
       <h2>Register</h2>
@@ -66,6 +45,92 @@
 
         <label for="login-password">Password:</label>
         <input type="password" id="login-password" name="password" required />
+
+        <button type="submit">Login</button>
+        <button id="registerbt">Register</button>
+      </form>
+    </div>
+
+ <div id="google-login">
+      <h2>Login with Google</h2>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div> 
+  </body> -->
+  <body>
+    <!-- <h1>User Authentication</h1> -->
+
+    <div id="registration">
+      <h2>Register</h2>
+      <form id="register-form">
+        <label for="register-username"></label>
+        <div class="input-container">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            id="register-username"
+            placeholder="username"
+            name="username"
+            required
+          />
+        </div>
+
+        <label for="register-email"></label>
+        <div class="input-container">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            id="register-email"
+            placeholder="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <label for="register-password"></label>
+        <div class="input-container">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="register-password"
+            placeholder="password"
+            name="password"
+            required
+          />
+        </div>
+
+        <button type="submit">Register</button>
+        <button id="backbt">Back</button>
+      </form>
+    </div>
+
+    <div id="login">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="login-username"></label>
+        <div class="input-container">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            id="login-username"
+            placeholder="username"
+            aria-label="username"
+            name="username"
+            required
+          />
+        </div>
+
+        <label for="login-password"></label>
+        <div class="input-container">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="login-password"
+            placeholder="password"
+            aria-label="password"
+            name="password"
+            required
+          />
+        </div>
 
         <button type="submit">Login</button>
         <button id="registerbt">Register</button>

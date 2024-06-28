@@ -456,6 +456,37 @@ body.dark-mode {
   border-width: 1px;
   box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
 }
+/* ====================CONTACT================================= */
+.sidebar-contact {
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 999; /* Less than header's z-index */
+  top: 255px; /* Adjusted to match the height of the fixed header */
+  right: 25%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: -1s;
+  padding-top: 20px; /* Adjusted padding to fit under header */
+  border-radius: 7%;
+  border-width: 1px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+}
+.sidebar-contact a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #0e0d0d;
+  display: block;
+  transition: 0.3s;
+  border-bottom: 1px solid #414243; /* Add bottom border */
+  justify-content: space-between;
+}
+.sidebar-contact a i {
+  color: #0056b3;
+}
+/* ====================CONTACT================================= */
 .sidebars {
   height: 100%;
   width: 0;

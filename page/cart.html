@@ -23,26 +23,27 @@
             <div class="logo">ERP</div>
           </div>
         </div>
-        <div>
+        <div class="search-container">
           <form id="search-form" action="/search" method="GET">
             <input
               type="text"
               id="search-input"
               name="q"
-              placeholder="Search..."
+              placeholder="Search"
               aria-label="Search"
             />
-            <button type="submit">
-              <i class="fas fa-search"></i>
-            </button>
+            <i class="search-icon">&#128269;</i>
           </form>
         </div>
         <div class="nav-right">
-          <a id="mode-toggle"><i class="fas fa-moon"></i></a>
+          <a id="mode-toggle" onclick="toggleButton()"
+            ><i class="fas fa-moon"></i
+          ></a>
           <a href="#" id="account-link"><i class="fas fa-user"></i></a>
         </div>
       </nav>
     </header>
+
     <div class="cart-form-container">
       <h2>Add Items to Cart</h2>
       <form id="cart-form">

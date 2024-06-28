@@ -55,6 +55,14 @@ document.getElementById("product-sidbar").onclick = function () {
     sidebar.style.width = "250px";
   }
 };
+document.getElementById("sidebar-contacts").onclick = function () {
+  var sidebar = document.getElementById("sidebar-contact");
+  if (sidebar.style.width === "400px") {
+    sidebar.style.width = "0";
+  } else {
+    sidebar.style.width = "400px";
+  }
+};
 document.getElementById("close-sidebar").onclick = function () {
   document.getElementById("sidebars").style.width = "0";
 };
