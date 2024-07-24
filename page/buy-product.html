@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,9 +40,53 @@
             </div>
         </aside>
         <div id="product-details" class="product-container">
-            <!-- Product details will be appended here by JavaScript -->
+            Product details will be appended here by JavaScript 
         </div>
     </div>
     <script src="../scripts/buy-product.js"></script>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Product</title>
+    <link rel="stylesheet" href="../styles/buy-product.css" />
+  </head>
+  <body>
+    <h1>Buy Product</h1>
+    <nav>
+      <a href="../index.html"><button>Back to Products</button></a>
+    </nav>
+    <div class="main-content">
+      <aside class="sidebar">
+        <h2>Options</h2>
+        <div class="option-group">
+          <h3>Size</h3>
+          <button id="decrement-size">-</button>
+          <input type="number" id="product-size" value="1" min="1" />
+          <button id="increment-size">+</button>
+        </div>
+        <div class="option-group">
+          <h3>Color</h3>
+          <select id="product-color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <div class="option-group">
+          <h3>Quality</h3>
+          <button id="decrement-size">-</button>
+          <input type="number" id="product-size" value="1" min="1" />
+          <button id="increment-size">+</button>
+        </div>
+      </aside>
+      <div id="product-details" class="product-container">
+        <!-- Product details will be appended here by JavaScript -->
+      </div>
+    </div>
+    <script src="../scripts/buy-product.js"></script>
+  </body>
 </html>

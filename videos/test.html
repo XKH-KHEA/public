@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="ttest.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Video Gallery</h1>
+      <div class="search-upload-container">
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Search videos..."
+          onkeyup="searchVideos()"
+        />
+      </div>
+      <div class="form-container">
+        <input type="text" id="video-url" placeholder="Enter video URL" />
+        <button id="save-video">Save Video</button>
+      </div>
+    </header>
+    <main>
+      <div class="video-player" id="videoPlayerContainer">
+        <video id="videoPlayer" controls></video>
+      </div>
+      <div class="video-list" id="videoList">
+        <!-- Video thumbnails will be dynamically inserted here -->
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Video Gallery</p>
+    </footer>
+    <script src="test.js"></script>
+  </body>
+</html>

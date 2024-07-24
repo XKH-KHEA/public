@@ -458,21 +458,42 @@ body.dark-mode {
 }
 /* ====================CONTACT================================= */
 .sidebar-contact {
-  height: 50%;
+  height: 65%;
   width: 0;
   position: fixed;
   z-index: 999; /* Less than header's z-index */
-  top: 255px; /* Adjusted to match the height of the fixed header */
-  right: 25%;
+  top: 100px; /* Adjusted to match the height of the fixed header */
+  right: 35%;
   background-color: #ffffff;
   overflow-x: hidden;
   transition: -1s;
   padding-top: 20px; /* Adjusted padding to fit under header */
-  border-radius: 7%;
+  border-radius: 2%;
   border-width: 1px;
   box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
 }
-.sidebar-contact a {
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  margin-left: 50px;
+  background: none;
+  border: none;
+  background-color: #000;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+/* .sidebar-contact a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px 15px;
   text-decoration: none;
@@ -480,12 +501,12 @@ body.dark-mode {
   color: #0e0d0d;
   display: block;
   transition: 0.3s;
-  border-bottom: 1px solid #414243; /* Add bottom border */
+  border-bottom: 1px solid #414243;
   justify-content: space-between;
 }
 .sidebar-contact a i {
   color: #0056b3;
-}
+} */
 /* ====================CONTACT================================= */
 .sidebars {
   height: 100%;
@@ -693,6 +714,47 @@ body.dark-mode {
   white-space: normal;
   margin-right: 10px;
 }
+/* ឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲCONTACTឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲឲ */
+
+/* .sidebar-contact {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+} */
+
+.sidebar-contact h1 {
+  text-align: center;
+}
+
+.sidebar-contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-contact label {
+  margin: 0.5em 0 0.2em;
+}
+
+.sidebar-contact input,
+textarea,
+button {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.sidebar-contact button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-contact button:hover {
+  background-color: #555;
+}
+
 /* ================================================@media (max-width: 580px)================================= */
 @media (max-width: 580px) {
   body {

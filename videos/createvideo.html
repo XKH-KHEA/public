@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="stylesheet" href="videocreate.css" />
+  </head>
+  <body>
+    <h1>Video Player</h1>
+    <div class="form-container">
+      <input type="text" id="video-url" placeholder="Enter video URL" />
+      <button id="save-video">Save Video</button>
+    </div>
+    <div class="video-list">
+      <h2>Saved Videos</h2>
+      <ul id="video-links"></ul>
+    </div>
+    <div class="video-wrapper">
+      <iframe id="video-player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script src="createvideo.js"></script>
+  </body>
+</html>

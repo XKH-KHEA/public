@@ -63,6 +63,22 @@ document.getElementById("sidebar-contacts").onclick = function () {
     sidebar.style.width = "400px";
   }
 };
+document.getElementById("sidebar-settings").onclick = function () {
+  var sidebar = document.getElementById("sidebar-setting");
+  if (sidebar.style.width === "400px") {
+    sidebar.style.width = "0";
+  } else {
+    sidebar.style.width = "400px";
+  }
+};
+document.getElementById("closeBtn").onclick = function () {
+  var close = document.getElementById("sidebar-contact");
+  if (close.style.width === "400px") {
+    close.style.width = "0";
+  } else {
+    close.style.width = "400px";
+  }
+};
 document.getElementById("close-sidebar").onclick = function () {
   document.getElementById("sidebars").style.width = "0";
 };
@@ -88,6 +104,14 @@ function toggleButton() {
     document.body.classList.toggle("dark-mode");
   });
 }
+// document.getElementById("close").onclick = function () {
+//   var sidebar = document.getElementById("sidebar-contact");
+//   if (sidebar.style.width === "400px") {
+//     sidebar.style.width = "0";
+//   } else {
+//     sidebar.style.width = "400px";
+//   }
+// };
 
 // const viewToggleButton = document.getElementById("toggle-view");
 // const productContainer = document.getElementById("products");

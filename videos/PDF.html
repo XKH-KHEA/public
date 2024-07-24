@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Khea's Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            animation: slide-down 1s ease-in-out;
+        }
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            position: relative;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+        nav a:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        nav a:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        nav a:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        nav a:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        nav a:nth-child(5) {
+            animation-delay: 1s;
+        }
+        nav a:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            width: 80%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fade-in-up 1s ease-in-out forwards;
+        }
+        section:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        section:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        section:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        section:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        section:nth-child(5) {
+            animation-delay: 1s;
+        }
+        section:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            animation: slide-up 1s ease-in-out;
+        }
+
+        @keyframes slide-down {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fade-in-up {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Mr. Khea's Personal Webpage</h1>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+    <a href="#setting">Setting</a>
+    <a href="#resources">Resources</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Mr. Khea. I specialize in training and am passionate about helping others achieve their potential. With years of experience in the field, I am dedicated to delivering effective and engaging training sessions.</p>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Here you can showcase your projects, achievements, and any work you're proud of. Add images, descriptions, and links to provide a comprehensive view of your portfolio.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, please use the contact form below or reach out via email at <a href="mailto:example@example.com">example@example.com</a>.</p>
+</section>
+
+<section id="blog">
+    <h2>Blog</h2>
+    <p>Share your thoughts, insights, and updates here. Regularly posting on your blog can keep your audience engaged and informed.</p>
+</section>
+
+<section id="setting">
+    <h2>Setting</h2>
+    <p>Customize your webpage settings here. You can add options for themes, display preferences, and more.</p>
+</section>
+
+<section id="resources">
+    <h2>Resources</h2>
+    <form id="resourceForm">
+        <label for="resourceLink">Link:</label>
+        <input type="url" id="resourceLink" name="resourceLink" required>
+        <button type="button" onclick="addLink()">Add Link</button>
+        <br><br>
+        <label for="pdfUpload">Upload PDF:</label>
+        <input type="file" id="pdfUpload" accept="application/pdf" required>
+        <button type="button" onclick="uploadPDF()">Upload PDF</button>
+    </form>
+    <div id="resourcesList">
+        <h3>Stored Links:</h3>
+        <ul id="linkList"></ul>
+        <h3>Stored PDFs:</h3>
+        <ul id="pdfList"></ul>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Mr. Khea. All rights reserved.</p>
+</footer>
+
+<script>
+    const addLink = () => {
+        const link = document.getElementById('resourceLink').value;
+        if (link) {
+            const linkList = document.getElementById('linkList');
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+            linkList.appendChild(listItem);
+            document.getElementById('resourceLink').value = '';
+        }
+    };
+
+    const uploadPDF = () => {
+        const pdfUpload = document.getElementById('pdfUpload');
+        const file = pdfUpload.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const pdfList = document.getElementById('pdfList');
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = e.target.result;
+                link.textContent = file.name;
+                link.target = '_blank';
+                listItem.appendChild(link);
+                pdfList.appendChild(listItem);
+                pdfUpload.value = '';
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+</script>
+
+</body>
+</html>

@@ -50,3 +50,18 @@ function getStarRating(rating) {
   }
   return stars;
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const sizeInput = document.getElementById('product-size');
+  const incrementButton = document.getElementById('increment-size');
+  const decrementButton = document.getElementById('decrement-size');
+
+  incrementButton.addEventListener('click', function() {
+      sizeInput.value = parseInt(sizeInput.value) + 1;
+  });
+
+  decrementButton.addEventListener('click', function() {
+      if (parseInt(sizeInput.value) > 1) {
+          sizeInput.value = parseInt(sizeInput.value) - 1;
+      }
+  });
+});
