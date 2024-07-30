@@ -67,7 +67,7 @@ nav {
   justify-self: flex-end;
   margin-right: -90px;
   justify-content: space-around;
-} 
+}
 #iconnav2 {
   color: gray;
   margin-top: 15px;
@@ -75,7 +75,7 @@ nav {
   justify-self: flex-end;
   margin-right: -90px;
   justify-content: space-around;
-} 
+}
 .fas {
   font-size: 20px;
 }
@@ -368,8 +368,8 @@ footer p {
   }
 }
 
- /* Video Player Modal */
- .modal {
+/* Video Player Modal */
+.modal {
   display: none; /* Hidden by default */
   position: fixed;
   z-index: 1;
@@ -409,13 +409,39 @@ footer p {
   width: 100%;
   height: 450px; /* Adjust height as needed */
 }
+/* ===================Upload================ */
+.modal-upload {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.closeUp {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closeUp:hover,
+.closeUp:focus {
+  color: black;
+  text-decoration: none;
+}
 
 /* ==============buttonlink=============== */
 .button-link {
   display: inline-flex;
   align-items: center;
   padding: 10px;
-  background-color:none; /* Example background color */
+  background-color: none; /* Example background color */
   color: white;
   text-decoration: none;
   border-radius: 5px;

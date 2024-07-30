@@ -25,7 +25,7 @@
         <div id="youtube-logo-container"></div>
         <input type="text" placeholder="Search" id="search-bar" />
         <div id="iconnav1">
-          <a href="../youtube/upload.html" type="button" class="button-link"> <i class="fas fa-video-camera"></i></a>
+          <a  onclick="UploadVideo()" type="button" class="button-link"> <i class="fas fa-video-camera"></i></a>
         </div>
          <div id="iconnav2">
           <a type="button" class="button-link"><i class="fas fa-bell" ></i></a>
@@ -198,6 +198,20 @@
         ></iframe>
       </div>
     </div>
+    <div id="video-player-upload" class="modal-upload">
+      <div class="modal-content">
+        <span class="closeUp" onclick="ClosUp()">&times;</span>
+        <div class="form-container">
+          <input type="text" id="video-url" placeholder="Enter video URL" />
+          <input type="text" id="video-title" placeholder="Enter video title" />
+          <input type="text" id="channel-name" placeholder="Enter channel name" />
+          <input type="text" id="views" placeholder="Enter views" />
+          <input type="text" id="uploaded-at" placeholder="Enter upload time" />
+          <input type="text" id="channel-thumbnail" placeholder="Enter channel thumbnail URL" />
+          <button id="save-video">Save Video</button>
+      </div>
+      </div>
+    </div>
 
     <footer>
       <p>This project is a cloned work and a recreation of YouTube's design</p>
@@ -311,6 +325,16 @@
 
       // Close video player when clicking on the close button
       document.querySelector(".modal .close").addEventListener("click", closeVideoPlayer);
+
+      function UploadVideo() {
+        const modals = document.getElementById("video-player-upload");
+        modals.style.display = "block";
+      }
+      function ClosUp()
+      {
+       const close= document.getElementsByClassName(".closeUp");
+       close.style.display="block";
+      }
 
       document.addEventListener("DOMContentLoaded", fetchVideos);
     </script>
