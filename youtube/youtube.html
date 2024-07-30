@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="upload.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>KhmerTube</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="header-left">
+          <button id="menu-button" onclick="displaySibar()">&#9776;</button>
+        </div>
+        <div id="youtube-logo-container"></div>
+        <input type="text" placeholder="Search" id="search-bar" />
+        <div id="iconnav1">
+          <a href="../youtube/upload.html" type="button" class="button-link"> <i class="fas fa-video-camera"></i></a>
+        </div>
+         <div id="iconnav2">
+          <a type="button" class="button-link"><i class="fas fa-bell" ></i></a>
+         </div>
+        <div class="header-right">
+            <button type="button"  id="aboutMeButton"> <i class="fas fa-user"></i></button>
+        </div>
+      </nav>
+      <section id="side-bar-section">
+        <div>
+          <ul class="side-bar">
+            <li id="active-title">
+                <i class="fas fa-home"></i>
+              <a href="#" class="side-bar-titles active"></i>Home</a>
+            </li>
+            <li>
+                <i class="fas fa-compass"></i>
+                <a href="#" class="side-bar-titles">Explore</a>
+            </li>
+            <li>
+                <i class="fas fa-tv"></i>
+                <a href="#" class="side-bar-titles">Subscriptions</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="side-bar">
+            <li>
+                <i class="fas fa-video"></i>
+                <a href="#" class="side-bar-titles">Library</a>
+            </li>
+            <li>
+                <i class="fas fa-history"></i>
+                <a href="#" class="side-bar-titles">History</a>
+            </li>
+            <li>
+                <i class="fas fa-video"></i>
+                <a href="#" class="side-bar-titles">Your videos</a>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <a href="#" class="side-bar-titles">Watch later</a>
+            </li>
+            <li>
+              <i class="fas fa-thumbs-up"></i>
+              <a href="#" class="side-bar-titles">Liked videos</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="side-bar-heading">SUBSCRIPTIONS</p>
+          <ul class="side-bar">
+            <li>
+              <div class="channel-dp-container-1"></div>
+              <a href="#" class="side-bar-titles">Ania Palmer</a>
+            </li>
+            <li>
+              <div class="channel-dp-container-1">
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20231229151313/dm9.webp"
+                  class="channel-dp-1"
+                />
+              </div>
+              <a href="#" class="side-bar-titles">The Puzzle World</a>
+            </li>
+            <li>
+              <div class="channel-dp-container-1"></div>
+              <a href="#" class="side-bar-titles">Sports Daily</a>
+            </li>
+            <li>
+              <div class="channel-dp-container-1">
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20231229150906/dm5.jpeg"
+                  class="channel-dp-1"
+                />
+              </div>
+              <a href="#" class="side-bar-titles">Rick Sorkin</a>
+            </li>
+            <li>
+              <div class="channel-dp-container-1">
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20231229150325/dm1.jpeg"
+                  class="channel-dp-1"
+                />
+              </div>
+              <a href="#" class="side-bar-titles">Android Daily</a>
+            </li>
+            <li>
+              <div class="channel-dp-container-1">
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20231229150542/dm2.webp"
+                  class="channel-dp-1"
+                />
+              </div>
+              <a href="#" class="side-bar-titles">Mike Miller</a>
+            </li>
+            <li>
+              <div class="channel-dp-container-1">
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20231229150700/dm4.webp"
+                  class="channel-dp-1"
+                />
+              </div>
+              <a href="#" class="side-bar-titles">Best Tips</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="side-bar-heading">MORE FROM YOUTUBE</p>
+          <ul class="side-bar">
+            <li>
+              <i class="fab fa-youtube"></i>
+              <a href="#" class="side-bar-titles">YouTube Premium</a>
+            </li>
+            <li>
+                <i class="fas fa-film"></i>
+                <a href="#" class="side-bar-titles">Films</a>
+            </li>
+            <li>
+              <i class="fa fa-gamepad"></i>
+              <a href="#" class="side-bar-titles">Gaming</a>
+            </li>
+            <li>
+                <i class="fas fa-broadcast-tower"></i>
+              <a href="#" class="side-bar-titles">Live</a>
+            </li>
+            <li>
+              <i class="fas fa-lightbulb"></i>
+              <a href="#" class="side-bar-titles">Learning</a>
+            </li>
+            <li>
+              <i class="fas fa-trophy"></i>
+              <a href="#" class="side-bar-titles">Sport</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="side-bar">
+            <li>
+                <i class="fas fa-cog"></i>
+                <a href="#" class="side-bar-titles">Settings</a>
+              </li>
+              <li>
+                <i class="fas fa-flag"></i>
+                <a href="#" class="side-bar-titles">Report history</a>
+              </li>
+              <li>
+                <i class="fas fa-question-circle"></i>
+                <a href="#" class="side-bar-titles">Help</a>
+              </li>
+              <li>
+                <i class="fas fa-comment-dots"></i>
+                <a href="#" class="side-bar-titles">Send feedback</a>
+              </li>
+          </ul>
+        </div>
+      </section>
+    <div id="thumbnails-container"></div>
+
+    <!-- Video Player Modal -->
+    <div id="video-player-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe
+          id="video-player"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <footer>
+      <p>This project is a cloned work and a recreation of YouTube's design</p>
+    </footer>
+
+    <script>
+      const apiURL = "https://khmer-shoping.onrender.com/videos";
+
+      async function fetchVideos() {
+        try {
+          const response = await fetch(apiURL);
+          const videos = await response.json();
+          displayThumbnails(videos);
+        } catch (error) {
+          console.error("Error fetching videos:", error);
+        }
+      }
+
+      function displayThumbnails(videos) {
+        const container = document.getElementById("thumbnails-container");
+        container.innerHTML = ""; // Clear existing content
+
+        videos.forEach((video) => {
+          console.log("Video object:", video); // Log video object for debugging
+
+          const videoUrl = video.url; // Get the video URL
+          if (videoUrl) {
+            const videoId = extractVideoID(videoUrl);
+            if (videoId) {
+              const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`; // Adjust for other platforms
+              const thumbnailHTML = `
+                            <div class="thumbnail" data-video-url="${videoUrl}">
+                                <img src="${thumbnailUrl}" alt="Thumbnail for ${video.title}">
+                                <div class="video-description">
+                                    <div class="channel-dp-container-2">
+                                        <img src="${video.channelThumbnail}" class="channel-dp-2">
+                                    </div>
+                                    <div class="video-details">
+                                        <a href="#" class="video-title">${video.title}</a>
+                                        <a href="#" class="channel-name">${video.channelName}</a>
+                                        <a href="#" class="views">${video.views} views</a>
+                                        <i class="fas fa-circle"></i>
+                                        <a href="#" class="time">${video.uploadedAt}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+              container.innerHTML += thumbnailHTML;
+            } else {
+              console.warn(`Invalid video URL: ${videoUrl}`);
+            }
+          } else {
+            console.warn("Video URL is undefined or null:", video);
+          }
+        });
+
+        // Add click event to thumbnails
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        thumbnails.forEach((thumbnail) => {
+          thumbnail.addEventListener("click", function () {
+            const videoUrl = this.getAttribute("data-video-url");
+            playVideo(videoUrl);
+          });
+        });
+      }
+
+      function extractVideoID(url) {
+        if (typeof url !== "string") {
+          console.warn("Invalid URL type:", url);
+          return null;
+        }
+        const regex =
+          /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+        const match = url.match(regex);
+        return match ? match[1] : null;
+      }
+
+      function getEmbedUrl(url) {
+        let embedUrl = "";
+        if (url.includes("youtube.com") || url.includes("youtu.be")) {
+          const videoId = url.split("v=")[1]?.split("&")[0] || url.split("/").pop();
+          embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        } else if (url.includes("facebook.com")) {
+          embedUrl = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}`;
+        }
+        return embedUrl;
+      }
+
+      function playVideo(url) {
+        const embedUrl = getEmbedUrl(url);
+        if (embedUrl) {
+          showVideoPlayer(embedUrl);
+        } else {
+          alert("Invalid video URL.");
+        }
+      }
+
+      function showVideoPlayer(src) {
+        const modal = document.getElementById("video-player-modal");
+        const iframe = document.getElementById("video-player");
+        iframe.src = src;
+        modal.style.display = "block";
+      }
+
+      function closeVideoPlayer() {
+        const modal = document.getElementById("video-player-modal");
+        const iframe = document.getElementById("video-player");
+        iframe.src = ""; // Stop the video
+        modal.style.display = "none";
+      }
+
+      // Close video player when clicking on the close button
+      document.querySelector(".modal .close").addEventListener("click", closeVideoPlayer);
+
+      document.addEventListener("DOMContentLoaded", fetchVideos);
+    </script>
+    <script src="youtube.js"></script>
+  </body>
+</html>

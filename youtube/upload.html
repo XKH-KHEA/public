@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="stylesheet" href="uplaod.css" />
+</head>
+<body>
+    <h1>Video Player</h1>
+    <div class="form-container">
+        <input type="text" id="video-url" placeholder="Enter video URL" />
+        <input type="text" id="video-title" placeholder="Enter video title" />
+        <input type="text" id="channel-name" placeholder="Enter channel name" />
+        <input type="text" id="views" placeholder="Enter views" />
+        <input type="text" id="uploaded-at" placeholder="Enter upload time" />
+        <input type="text" id="channel-thumbnail" placeholder="Enter channel thumbnail URL" />
+        <button id="save-video">Save Video</button>
+    </div>
+    <div class="video-list">
+        <h2>Saved Videos</h2>
+        <ul id="video-links"></ul>
+    </div>
+    <div class="video-wrapper">
+        <iframe id="video-player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script src="upload.js"></script>
+</body>
+</html>
